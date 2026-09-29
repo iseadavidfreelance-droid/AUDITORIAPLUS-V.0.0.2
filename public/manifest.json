@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "AUDITORIAPLUS+ Offline PWA",
+  "short_name": "Auditoria+",
+  "description": "Sistema Offline-First de Auditoría Física de Inventarios y Conexión MaraPlus ERP",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#020617",
+  "theme_color": "#059669",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='36' fill='%23059669'/%3E%3Cpath d='M96 40 L140 140 L120 140 L110 115 L82 115 L72 140 L52 140 Z M88 95 L104 95 L96 70 Z' fill='%23ffffff'/%3E%3Ctext x='136' y='80' font-family='monospace' font-size='48' font-weight='bold' fill='%2334d399'%3E+%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%23059669'/%3E%3Cpath d='M256 100 L370 380 L320 380 L295 315 L217 315 L192 380 L142 380 Z M234 260 L278 260 L256 190 Z' fill='%23ffffff'/%3E%3Ctext x='360' y='210' font-family='monospace' font-size='120' font-weight='bold' fill='%2334d399'%3E+%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+# ==============================================================================
+# MaraPlus Relay Agent - Docker Compose
+# ==============================================================================
+# Note: "network_mode: host" is recommended on Linux so the container directly
+# shares the host's physical network adapter to reach http://192.168.15.225:3002
+# without routing or gateway friction.
+# ==============================================================================
+
+version: '3.8'
+
+services:
+  maraplus-relay:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: maraplus-relay-agent:latest
+    container_name: maraplus-relay-agent
+    restart: unless-stopped
+    
+    # "host" networking allows seamless communication with on-prem LAN 192.168.15.225
+    # (If running on macOS/Windows Docker Desktop, use extra_hosts or bridge mapping instead)
+    network_mode: host
+    
+    env_file:
+      - .env
+
+    environment:
+      - NODE_ENV=production
+      - MARAPLUS_BASE_URL=http://192.168.15.225:3002
+      - THROTTLE_DELAY_MS=300
+      - BATCH_SIZE=10
+      - INTER_BATCH_PAUSE_MS=2000
+      - MAX_RETRIES=3
+      - PORT=3001
+
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"

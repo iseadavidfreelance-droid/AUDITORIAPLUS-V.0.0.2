@@ -1,0 +1,6 @@
+{
+  "name": "MaraPlus On-Premise Relay Agent",
+  "description": "Dockerized Node.js On-Premise Relay Agent bridging Supabase Cloud Realtime Queue with local MaraPlus ERP REST API with FIFO throttling, batching, and error handling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
